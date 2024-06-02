@@ -25,6 +25,15 @@ builder.Services.AddCors(options =>
 builder.Services.AddScoped<IProduktService, ProduktService>();
 builder.Services.AddScoped<IDBContext, AppDbContext>();
 
+if (builder.Environment.IsDevelopment())
+{
+    var connectionString = builder.Configuration.GetConnectionString("LocalConnection");
+}
+else
+{
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+}
+
 var app = builder.Build();
 
 
