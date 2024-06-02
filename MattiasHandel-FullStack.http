@@ -1,0 +1,6 @@
+@MattiasHandel_FullStack_HostAddress = http://localhost:5142
+
+GET {{MattiasHandel_FullStack_HostAddress}}/index.html
+Accept: application/json
+
+###
